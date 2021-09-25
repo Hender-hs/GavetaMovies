@@ -1,9 +1,9 @@
-import { Header } from '../../components/header'
-import * as S from './styles'
-import { api, apiKey } from '../../server'
-import { useEffect, useState, Dispatch, SetStateAction } from 'react'
-import { RequestMoviesList } from '../../utils/types/moviedata'
-import { MoviesList } from '../../components/moviesLists'
+import { Header }                                         from '../../components/header'
+import * as S                                             from './styles'
+import { api, apiKey }                                    from '../../server'
+import { useEffect, useState, Dispatch, SetStateAction }  from 'react'
+import { RequestMoviesList }                              from '../../utils/types/moviedata'
+import { MoviesList }                                     from '../../components/moviesLists'
 
 
 export const Dashboard = () => {
@@ -24,19 +24,19 @@ export const Dashboard = () => {
   useEffect( () => {
     
     !upcomingMovies && getMoviesList('upcoming',  setUpcomingMovies)
-    // !latestMovies   && getMoviesList('latest',    setLatestMovies)
-    // !popularMovies  && getMoviesList('popular',   setPopularMovies)
-    // !topRatedMovies && getMoviesList('top_rated', setTopRatedMovies)
+    !latestMovies   && getMoviesList('latest',    setLatestMovies)
+    !popularMovies  && getMoviesList('popular',   setPopularMovies)
+    !topRatedMovies && getMoviesList('top_rated', setTopRatedMovies)
 
   })
 
   return (
     <S.Main>
       <Header />
-      {!!upcomingMovies && <MoviesList titleList='Em Breve' moviesList={upcomingMovies}  />}
-      {/* {!!latestMovies   && <MoviesList moviesList={latestMovies}    />} */}
-      {/* {!!popularMovies  && <MoviesList moviesList={popularMovies}   />} */}
-      {/* {!!topRatedMovies && <MoviesList moviesList={topRatedMovies}  />} */}
+      {!!upcomingMovies && <MoviesList titleList='Em Breve'           moviesList={upcomingMovies}  />}
+      {/* {!!latestMovies   && <MoviesList titleList='Últimos Filmes'     moviesList={latestMovies}    />} */}
+      {!!popularMovies  && <MoviesList titleList='Filmes Populares'   moviesList={popularMovies}   />}
+      {!!topRatedMovies && <MoviesList titleList='Os Mais Avaliados'  moviesList={topRatedMovies}  />}
     </S.Main>
   )
 } 

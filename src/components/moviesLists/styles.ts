@@ -4,18 +4,22 @@ export const Img = styled.img `
   
 ` 
 
-export const Title = styled.h1 `
+export const ListTitle = styled.h1 `
   color: white;
 `
 
-export const Div = styled.div `
-  /* background-color: pink; */
+export const ListSection = styled.div `
+  background-color: pink;
   width: 100vw;
-  /* height: 105vh; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 export const SectionList = styled.section `
   width: 100%;
-  /* height: 30%; */
-  background-color: plum;
+
+  display: flex;
+  justify-content: center;
 `

@@ -1,4 +1,5 @@
 import { RequestMoviesList }  from '../../utils/types/moviedata'
+import { MovieImg } from '../movieImg'
 import * as S                 from './styles'
 
 interface MoviesListProps {
@@ -7,13 +8,21 @@ interface MoviesListProps {
 }
 
 export const MoviesList = ({titleList, moviesList}: MoviesListProps) => {
-  
+
+  const printMovieImages = () => 
+    moviesList?.results.slice(0, 5).map( 
+      (element, index) => <MovieImg key={index} poster_path={element.poster_path} />
+    )
+
   return (
-    <S.Div>
-      <S.Title>{titleList}</S.Title>
+    <S.ListSection>
+      
+      <S.ListTitle>{titleList}</S.ListTitle>
+
       <S.SectionList>
-        { moviesList?.results.slice(0, 5).map( (element, index) => <S.Title key={index} >{element.original_title}</S.Title> ) }
+        {printMovieImages()?.slice(0, 1)}
       </S.SectionList>
-    </S.Div>
+      
+    </S.ListSection>
   )
 }

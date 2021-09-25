@@ -1,15 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { GlobalStyle } from './globalStyles'
-import { BrowserRouter } from 'react-router-dom';
+import React              from 'react';
+import ReactDOM           from 'react-dom';
+import App                from './App';
+import reportWebVitals    from './reportWebVitals';
+import { GlobalStyle }    from './globalStyles'
+import { BrowserRouter }  from 'react-router-dom';
+import { Provider }       from './provider';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
-      <GlobalStyle />
+      <Provider>
+        <App />
+        <GlobalStyle />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

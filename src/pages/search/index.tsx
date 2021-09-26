@@ -1,10 +1,8 @@
 import * as S           from './styles'
 import { useHistory, useParams }   from 'react-router'
 import { SearchInput }  from '../../components/inputSearch'
-
-interface useParamsType {
-  type: string
-}
+import { useParamsType } from '../../utils/types/useParamsTypes'
+import { SearchedContentInfo } from '../../components/printSearchedContent'
 
 export const SearchPage = () => {
 
@@ -18,6 +16,7 @@ export const SearchPage = () => {
         <S.BackArrow size={40} onClick={() => history.push('/')} />
       </S.DivBackArrow>
       <SearchInput whichSearch={type} />
+      <SearchedContentInfo />
     </S.MainContainer>
   )
 }

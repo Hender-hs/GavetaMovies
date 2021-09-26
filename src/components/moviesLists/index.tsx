@@ -1,5 +1,5 @@
-import { RequestMoviesList }  from '../../utils/types/moviedata'
-import { MovieImg } from '../movieImg'
+import { RequestMoviesList }  from '../../utils/types/movieTypes'
+import { MovieImg }           from '../movieImg'
 import * as S                 from './styles'
 
 interface MoviesListProps {

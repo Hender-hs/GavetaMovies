@@ -2,7 +2,7 @@ import { Header }                                         from '../../components
 import * as S                                             from './styles'
 import { api, apiKey }                                    from '../../server'
 import { useEffect, useState, Dispatch, SetStateAction }  from 'react'
-import { RequestMoviesList }                              from '../../utils/types/moviedata'
+import { RequestMoviesList }                              from '../../utils/types/movieTypes'
 import { MoviesList }                                     from '../../components/moviesLists'
 
 

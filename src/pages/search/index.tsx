@@ -2,7 +2,7 @@ import * as S                     from './styles'
 import { useHistory, useParams }  from 'react-router'
 import { SearchInput }            from '../../components/searchComponents/inputSearch'
 import { useParamsType }          from '../../utils/types/useParamsTypes'
-import { SearchedContentInfo }    from '../../components/searchComponents/printFetchedContent'
+import { SearchedContent }    from '../../components/searchComponents/printFetchedContent'
 import { MobileMenu }             from '../../components/dashboardComponents/mobileMenu'
 
 export const SearchPage = () => {
@@ -19,7 +19,7 @@ export const SearchPage = () => {
         <MobileMenu color='black' />
       </S.Nav>
       <S.RequestedContent>
-        <SearchedContentInfo />
+        <SearchedContent />
       </S.RequestedContent>
     </S.MainContainer>
   )

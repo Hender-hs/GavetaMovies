@@ -3,11 +3,11 @@ import { toSVGUrl }             from '../../../utils/toSVGUrl'
 import { useEffect, useState }  from 'react'
 import { MovieData }            from '../../../utils/types/movieTypes'
 import { api, apiKey }          from '../../../server'
-
+import Rating                   from '@mui/material/Rating'
 
 interface PageProps {
   'id': string,
-  'type': string
+  'type': string,
 }
 
 
@@ -35,6 +35,7 @@ export const MovieContentPage = ({id, type}: PageProps) => {
             <S.DivImgAndDes>
               <S.Img src={toSVGUrl(movieContent.poster_path)} />
               <S.DivOverview>
+                <Rating size='large' readOnly value={movieContent.vote_average / 2} />
                 <S.P>{movieContent.overview}</S.P>
               </S.DivOverview>
             </S.DivImgAndDes>

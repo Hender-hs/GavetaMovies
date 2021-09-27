@@ -8,7 +8,7 @@ import { toSVGUrl }               from '../../../utils/toSVGUrl'
 import * as S                     from './styles' 
 
 
-export const SearchedContentInfo = () => {
+export const SearchedContent = () => {
 
   const history = useHistory()
 

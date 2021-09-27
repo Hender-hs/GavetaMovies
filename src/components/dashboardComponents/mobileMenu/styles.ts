@@ -4,7 +4,7 @@ import { Link }                 from 'react-router-dom'
 import { FiMenu as MenuBurger } from 'react-icons/fi'
 
 
-export const MainContent = styled.div `
+export const MainContainer = styled.div `
   width: 100vw;
   height: 100vh;
   background: linear-gradient(155.64deg, #00267C 30.11%, #00081A 47.14%);

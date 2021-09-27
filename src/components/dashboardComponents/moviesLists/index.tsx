@@ -22,13 +22,10 @@ export const MoviesList = ({titleList, moviesList}: MoviesListProps) => {
 
   return (
     <S.ListSection>
-      
       <S.ListTitle>{titleList}</S.ListTitle>
-
-      <S.List>
+      <S.List data-testid='movies-list' >
         {printMovieImages()?.slice(0, 9)}
       </S.List>
-      
     </S.ListSection>
   )
 }

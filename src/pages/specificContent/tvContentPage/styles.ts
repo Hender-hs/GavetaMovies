@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled             from 'styled-components'
+
 
 
 export const MainContainer = styled.main `
@@ -95,4 +96,10 @@ export const LeftSide = styled.div `
 `
 
 export const RightSide = styled(LeftSide) `
+`
+
+export const ImgDiv = styled.div `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `

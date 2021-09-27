@@ -1,5 +1,5 @@
 import { MobileMenu } from '../mobileMenu'
-import * as S from './styles'
+import * as S         from './styles'
 
 export const Nav = () => {
 

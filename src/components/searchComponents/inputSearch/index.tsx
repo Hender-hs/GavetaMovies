@@ -28,12 +28,11 @@ export const SearchInput = ({whichSearch}: SearchInputProp) => {
     if (type === 'tv')      setTvSeriesResults(response.data)
 
   }
-
   
   return (
     <S.DivInput>
-      <S.Input placeholder={`Search for ${type}`} onChange={(event) => setInputValue(event.target.value)} />
-      <S.SearchIcon onClick={handleClickSearch} />
+      <S.Input data-testid='input' placeholder={`Search for ${type}`} onChange={(event) => setInputValue(event.target.value)} />
+      <S.SearchIcon data-testid='searchIcon' onClick={handleClickSearch} />
     </S.DivInput>
   )
 }

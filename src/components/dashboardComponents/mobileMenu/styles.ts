@@ -1,6 +1,7 @@
-import styled               from 'styled-components'
-import { IoCloseOutline }   from 'react-icons/io5'
-import { Link }             from 'react-router-dom'
+import styled                   from 'styled-components'
+import { IoCloseOutline }       from 'react-icons/io5'
+import { Link }                 from 'react-router-dom'
+import { FiMenu as MenuBurger } from 'react-icons/fi'
 
 
 export const MainContent = styled.div `
@@ -27,4 +28,8 @@ export const StyledLink = styled(Link) `
   color: white;
   font-size: 30px;
   font-family: sans-serif;
+`
+
+export const StyledMenu = styled(MenuBurger) `
+  cursor: pointer;
 `

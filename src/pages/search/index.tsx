@@ -1,8 +1,9 @@
-import * as S           from './styles'
-import { useHistory, useParams }   from 'react-router'
-import { SearchInput }  from '../../components/inputSearch'
-import { useParamsType } from '../../utils/types/useParamsTypes'
-import { SearchedContentInfo } from '../../components/printSearchedContent'
+import * as S                     from './styles'
+import { useHistory, useParams }  from 'react-router'
+import { SearchInput }            from '../../components/searchComponents/inputSearch'
+import { useParamsType }          from '../../utils/types/useParamsTypes'
+import { SearchedContentInfo }    from '../../components/searchComponents/printSearchedContent'
+import { MobileMenu }             from '../../components/dashboardComponents/mobileMenu'
 
 export const SearchPage = () => {
 
@@ -12,11 +13,14 @@ export const SearchPage = () => {
 
   return (
     <S.MainContainer>
-      <S.DivBackArrow>
+      <S.Nav>
         <S.BackArrow size={40} onClick={() => history.push('/')} />
-      </S.DivBackArrow>
-      <SearchInput whichSearch={type} />
-      <SearchedContentInfo />
+        <SearchInput whichSearch={type} />
+        <MobileMenu color='black' />
+      </S.Nav>
+      <S.RequestedContent>
+        <SearchedContentInfo />
+      </S.RequestedContent>
     </S.MainContainer>
   )
 }

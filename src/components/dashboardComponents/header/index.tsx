@@ -1,4 +1,3 @@
-import { Button } from '../button'
 import { Nav } from '../nav'
 import * as S from './styles'
 
@@ -12,7 +11,6 @@ export const Header = () => {
 
       <S.ImgInfoDiv>
         <S.H1>Cavaleiro das Trevas</S.H1>
-        <Button color='blue' >Mais Info</Button>
       </S.ImgInfoDiv>
 
     </S.Header>

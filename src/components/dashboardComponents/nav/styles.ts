@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled                   from 'styled-components'
 import { FiMenu as MenuBurger } from 'react-icons/fi'
 
 export const Nav = styled.nav `
@@ -6,7 +6,6 @@ export const Nav = styled.nav `
   left: 0;
   top: 0;
 
-  background-color: red;
   width: 100%;
   height: 10%;
 

@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const Main = styled.main `
 
-  background: linear-gradient(155.64deg, #00267C 60.11%, #00081A 87.14%);
+  background: linear-gradient(155.64deg, #00267C 30.11%, #00081A 57.14%);
   width: 100vw;
-  min-height: 300vh;
+  min-height: 230vh;
 
   display: flex;
   flex-direction: column;

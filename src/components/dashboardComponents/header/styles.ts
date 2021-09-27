@@ -17,6 +17,10 @@ export const ImgBackgroung = styled.img `
   object-fit: cover;
 
   filter: brightness(80%);
+
+  @media (min-width: 768px) {
+    filter: brightness(50%);
+  }
 `
 
 export const ImgInfoDiv = styled.div `
@@ -25,8 +29,6 @@ export const ImgInfoDiv = styled.div `
 
   position: absolute;
   top: 60%;
-
-  background-color: blueviolet;
 
   display: flex;
   flex-direction: column;

@@ -1,6 +1,7 @@
-import { Route, Switch } from 'react-router-dom'
-import { Dashboard } from '../pages/dashboard'
-import { SearchPage } from '../pages/search'
+import { Route, Switch }  from 'react-router-dom'
+import { Dashboard }      from '../pages/dashboard'
+import { InfoContent }    from '../pages/specificContent'
+import { SearchPage }     from '../pages/search'
 
 export const Routes = () => {
 
@@ -8,6 +9,7 @@ export const Routes = () => {
     <Switch>
       <Route exact path='/' component={Dashboard} />
       <Route exact path='/search/:type' component={SearchPage} />
+      <Route exact path='/search/:type/:id' component={InfoContent} />
     </Switch>
   )
 }

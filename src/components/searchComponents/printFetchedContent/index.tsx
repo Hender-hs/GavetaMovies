@@ -16,39 +16,32 @@ export const SearchedContentInfo = () => {
 
   const {movieResults, actorResults, tvSeriesResults} = useSearchContent()
 
+
+  const ReturnJSXCard = (id: number, imgLink: string, name: string, index: number) => (
+    <S.Container key={index} onClick={() => history.push(`/search/${type}/${id}`)} >
+      <S.Img src={toSVGUrl(imgLink || '')} />
+      <S.H3>{name}</S.H3>
+    </S.Container>
+  )
+
   
   const PrintActorSearchResult = (element: ActorSearchResult) => (
     element.results?.map( 
-      (eachPerson, index) => ( 
-        <S.Container key={index} onClick={() => history.push(`/search/${type}/${eachPerson.id}`)} >
-          <S.Img src={toSVGUrl(eachPerson.profile_path || '')} />
-          <S.H3>{eachPerson.name}</S.H3>
-        </S.Container>
-      )
+      (eachPerson, index) => ReturnJSXCard(eachPerson.id, eachPerson.profile_path, eachPerson.name, index)
     )
   )
 
   
   const PrintMovieSearchResult = (element: MovieSearchResult) => (
     element.results?.map( 
-      (eachMovie, index) => ( 
-        <S.Container key={index} onClick={() => history.push(`/search/${type}/${eachMovie.id}`)} >
-          <S.Img src={toSVGUrl(eachMovie.poster_path || '')} />
-          <S.H3>{eachMovie.title}</S.H3>
-        </S.Container>
-      )
+      (eachMovie, index) => ReturnJSXCard(eachMovie.id, eachMovie.poster_path, eachMovie.title, index)
     )
   )
 
 
   const PrintTvSeriesSearchResult = (element: TvSearchResult) => (
     element.results?.map( 
-      (eachTvSerie, index) => (
-        <S.Container key={index} onClick={() => history.push(`/search/${type}/${eachTvSerie.id}`)} >
-          <S.Img src={toSVGUrl(eachTvSerie.poster_path || '')} />
-          <S.H3>{eachTvSerie.name}</S.H3>
-        </S.Container>
-      )
+      (eachTvSerie, index) => ReturnJSXCard(eachTvSerie.id, eachTvSerie.poster_path, eachTvSerie.name, index)
     )
   )
 

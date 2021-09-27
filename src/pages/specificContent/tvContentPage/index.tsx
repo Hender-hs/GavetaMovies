@@ -5,7 +5,6 @@ import { TvSearchedContent }    from '../../../utils/types/searchTvTypes'
 import { api, apiKey }          from '../../../server'
 
 
-
 interface PageProps {
   'id': string,
   'type': string

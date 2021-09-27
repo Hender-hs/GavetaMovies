@@ -1,7 +1,8 @@
 import styled                       from 'styled-components'
 import { styled as materialStyles } from '@material-ui/styles'
 import { Paper }                    from '@material-ui/core'
-console.log(materialStyles(Paper))
+
+
 export const Container = materialStyles(Paper)({
   'width': '80vw',
   'cursor': 'pointer',

@@ -23,7 +23,7 @@ export const Dashboard = () => {
     !upcomingMovies && getMoviesList('upcoming',  setUpcomingMovies)
     !popularMovies  && getMoviesList('popular',   setPopularMovies)
     !topRatedMovies && getMoviesList('top_rated', setTopRatedMovies)
-  })
+  }, [upcomingMovies, popularMovies, topRatedMovies])
 
   return (
     <S.Main>

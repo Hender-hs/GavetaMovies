@@ -18,7 +18,7 @@ export const InfoContent = () => {
   
   return (
     <div>
-      <S.BackArrow size={40} color='white' onClick={() => history.push(`/search/${type}`)} />
+      <S.BackArrow size={40} color='white' onClick={() => history.goBack()} />
       { type === 'person' && <ActorContentPage id={id} type={type} /> } 
       { type === 'movie'  && <MovieContentPage id={id} type={type} /> }
       { type === 'tv'     && <TvSerieContentPage id={id} type={type} /> }
